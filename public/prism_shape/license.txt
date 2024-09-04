@@ -1,0 +1,11 @@
+Model Information:
+* title:	Penrose Triangle-Large
+* source:	https://sketchfab.com/3d-models/penrose-triangle-large-3e16e9c7432b4ac6b7d89eb1f3a2d321
+* author:	Michael Ostroff (https://sketchfab.com/MichaelOstroff)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Penrose Triangle-Large" (https://sketchfab.com/3d-models/penrose-triangle-large-3e16e9c7432b4ac6b7d89eb1f3a2d321) by Michael Ostroff (https://sketchfab.com/MichaelOstroff) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

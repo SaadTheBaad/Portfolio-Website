@@ -20,14 +20,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
             <img src={logo} alt='logo' className='w-9 h-9 object-contain'/>
-            <p className='text-white text-[18px] font-bold cursor-pointer flex'>Saad Sheikh</p>
+            <p className='text-black text-[18px] font-bold cursor-pointer flex'>Saad Sheikh</p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${active === link.title ? "text-[#6A0DAD]" : "text-secondary"
+                } hover:text-[#6A0DAD] text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}>
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
