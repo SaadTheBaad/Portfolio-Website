@@ -20,17 +20,14 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  background:rgba(70, 68, 68, 0.8); /* A semi-transparent dark purple */
+  /* background: linear-gradient(
     to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    rgba(91, 47, 145, 0.85),
+    rgba(0, 0, 0, 0.85)
+  ); */
+  backdrop-filter: blur(10px); /* Adds a blur effect for a glassy look */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Light border for separation */
 }
 
 .violet-gradient {
@@ -43,10 +40,9 @@
   );
 }
 
-.green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+.card-gradient {
+  background: linear-gradient(90deg, #915eff, #00D1FF);
+  background: -webkit-linear-gradient(-90deg, #915eff, #00D1FF);
 }
 
 .orange-text-gradient {

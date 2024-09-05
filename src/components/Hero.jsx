@@ -13,6 +13,20 @@ const Hero = () => {
     cursor: true,  
   });
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1280);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div className={`${styles.paddingX} absolute justify-center inset-0 max-w-7xl mx-auto flex flex-row items-center gap-5`}>
@@ -45,7 +59,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <PrismCanvas className="block sm:hidden"/>
+      {!isMobile && <PrismCanvas />}
     </section>
   );
 }
