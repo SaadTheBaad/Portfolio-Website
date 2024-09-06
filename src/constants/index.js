@@ -57,6 +57,14 @@ import {
       title: "put stuff here 2",
       icon: creator,
     },
+    {
+      title: "put stuff here 3",
+      icon: creator,
+    },
+    {
+      title: "put stuff here 4",
+      icon: creator,
+    },
   ];
   
   const technologies = [

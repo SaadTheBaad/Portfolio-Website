@@ -86,3 +86,20 @@ export const textVariant = (delay) => {
       },
     };
   };
+
+  export const slideContainer = (maxCards) => {
+    return {
+      hidden: {
+        x: 0,
+      },
+      show: {
+        x: maxCards * 100, // Adjust as necessary based on the number of cards shown at a time
+        transition: {
+          type: "tween",
+          ease: "easeOut",
+          duration: 0.75, // Adjust the duration as needed
+        },
+      },
+    };
+  };
+  

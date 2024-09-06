@@ -19,15 +19,8 @@
   display: block;
 }
 
-.black-gradient {
-  background:rgba(70, 68, 68, 0.8); /* A semi-transparent dark purple */
-  /* background: linear-gradient(
-    to right,
-    rgba(91, 47, 145, 0.85),
-    rgba(0, 0, 0, 0.85)
-  ); */
-  backdrop-filter: blur(10px); /* Adds a blur effect for a glassy look */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Light border for separation */
+.menu-color {
+  background:rgba(70, 68, 68, 0.8); 
 }
 
 .violet-gradient {
