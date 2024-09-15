@@ -3,7 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { services } from '../constants';
-import { fadeIn, textVariant, slideIn } from '../utils/motion';
+import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
@@ -77,7 +77,7 @@ const About = () => {
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-7 items-center'>
         <motion.div onClick={handlePrev} variants={fadeIn("", "", 0.2, 1)}>
-          <MdOutlineKeyboardDoubleArrowLeft color='black' size={48} cursor={'pointer'} />
+          <MdOutlineKeyboardDoubleArrowLeft className="arrowIcon" size={48} cursor={'pointer'} />
         </motion.div>
 
         {visibleServices.map((service, index) => (
@@ -94,7 +94,7 @@ const About = () => {
         ))}
 
         <motion.div onClick={handleNext} variants={fadeIn("", "", 0.2, 1)}>
-          <MdOutlineKeyboardDoubleArrowRight color='black' size={48} cursor={'pointer'} />
+          <MdOutlineKeyboardDoubleArrowRight className="arrowIcon" size={48} cursor={'pointer'}/>
         </motion.div>
       </div>
     </>

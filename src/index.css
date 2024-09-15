@@ -19,6 +19,16 @@
   display: block;
 }
 
+.arrowIcon {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.arrowIcon:hover {
+  color: #6A0DAD;
+  transform: scale(1.2);
+}
+
 .menu-color {
   background:rgba(70, 68, 68, 0.8); 
 }

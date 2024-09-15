@@ -21,10 +21,8 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import TJX_Symbol from "./company/TJX_Symbol.png"
+import workhub_icon from "./company/workhub_icon.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -52,10 +50,8 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  workhub_icon,
+  TJX_Symbol,
   carrent,
   jobit,
   tripguide,
