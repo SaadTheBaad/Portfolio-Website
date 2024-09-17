@@ -3,24 +3,26 @@ import {
     backend,
     creator,
     web,
+    pakistan,
+    twin,
+    controller,
     javascript,
     typescript,
     html,
     css,
     reactjs,
-    redux,
+    angular,
     tailwind,
-    nodejs,
-    mongodb,
+    python,
+    c_plus_Plus,
     git,
     figma,
-    docker,
+    c,
+    net,
     TJX_Symbol,
     workhub_icon,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
+    default_project_image,
   } from "../assets";
   
   export const navLinks = [
@@ -40,28 +42,36 @@ import {
   
   const services = [
     {
-      title: "Frontend Web Developer",
+      title: "Frontend Developer",
       icon: web,
     },
     {
       title: "Backend Developer",
-      icon: mobile,
-    },
-    {
-      title: "Storybook Champion",
       icon: backend,
     },
     {
-      title: "put stuff here 2",
+      title: "Storybook Expert",
+      icon: mobile,
+    },
+    {
+      title: "Favourite Framework",
+      icon: angular,
+    },
+    {
+      title: "Football Enthusiast",
       icon: creator,
     },
     {
-      title: "put stuff here 3",
-      icon: creator,
+      title: "Game Enthusiast",
+      icon: controller,
     },
     {
-      title: "put stuff here 4",
-      icon: creator,
+      title: "Born In Pakistan",
+      icon: pakistan,
+    },
+    {
+      title: "I Am A Twin",
+      icon: twin,
     },
   ];
   
@@ -87,24 +97,32 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Angular",
+      icon: angular,
+    },
+    {
+      name: ".Net",
+      icon: net,
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
     },
     {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
       name: "Three JS",
       icon: threejs,
+    },
+    {
+      name: "C",
+      icon: c,
+    },
+    {
+      name: "C++",
+      icon: c_plus_Plus,
+    },
+    {
+      name: "Python",
+      icon: python,
     },
     {
       name: "git",
@@ -113,10 +131,6 @@ import {
     {
       name: "figma",
       icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
     },
   ];
   
@@ -162,67 +176,40 @@ import {
     },
   ];
   
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
   const  projects = [
     {
       title: "Project 1",
-      year: "2022",
+      year: "2024",
       results: [
         { title: "Info 1" },
         { title: "Info 2" },
         { title: "Info 3" },
       ],
       link: "",
-      image: tripguide,
+      image: default_project_image,
     },
     {
       title: "Project 2",
-      year: "2032",
+      year: "2024",
       results: [
         { title: "Info 4" },
         { title: "Info 5" },
         { title: "Info 6" },
       ],
       link: "",
-      image: tripguide,
+      image: default_project_image,
     },
     {
       title: "Project 3",
-      year: "2012",
+      year: "2024",
       results: [
         { title: "Info 7" },
         { title: "Info 8" },
         { title: "Info 9" },
       ],
       link: "",
-      image: tripguide,
+      image: default_project_image,
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, projects };

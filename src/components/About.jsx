@@ -11,7 +11,7 @@ const ServiceCard = ({ title, icon }) => {
   return (
     <Tilt className='xs:w-[220px] w-full'>
       <motion.div className='w-full card-gradient p-[1px] rounded-[20px] shadow-card'>
-        <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+        <div className='bg-[#83c5be] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
           <img src={icon} alt={title} className='w-16 h-16 object-contain' />
           <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
         </div>
@@ -28,7 +28,6 @@ const About = () => {
   const maxCards = 4;
   const totalCards = services.length;
 
-  // Function to handle key press events
   const handleKeyPress = (event) => {
     if (event.key === 'ArrowRight') {
       handleNext();
@@ -41,16 +40,15 @@ const About = () => {
   const handleNext = () => {
     setSlideDirection("right");
     setIsClicked(true);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards); // Loop back to the first card
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
   };
 
   const handlePrev = () => {
     setSlideDirection("left");
     setIsClicked(true);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalCards) % totalCards); // Loop back to the last card
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalCards) % totalCards); 
   };
 
-  // Slice the array of services to show only the current range of cards
   const visibleServices = [];
   for (let i = 0; i < maxCards; i++) {
     visibleServices.push(services[(currentIndex + i) % totalCards]);

@@ -28,7 +28,7 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
     after:pointer-events-none
     lg:pt-16 lg:px-20 
     sticky"
-    style={{ top: `${84 + index * 40}px` }}>
+      style={{ top: `${84 + index * 40}px` }}>
       <div className='lg:grid lg:grid-cols-2 lg:gap-16'>
         <div className='lg:pb-16'>
           <div className='flex justify-between items-center'>
@@ -47,15 +47,15 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
             ))}
           </ul>
           <a href={link}>
-            <button className='bg-black tex-white h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
+            <button className='bg-black text-white h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
               <span>View Project</span>
               <FaArrowTrendUp />
             </button>
           </a>
         </div>
-        <div className='relative'>
+        <div>
           <img src={image} alt={title}
-            className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none' />
+            className='mt-8 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none' />
         </div>
       </div>
     </div>
@@ -69,10 +69,10 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30-px]'>
-        Some text goes here. text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.
-        text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.
-        text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.
-        text goes here.text goes here.text goes here.text goes here.text goes here.text goes here.text goes here. hehashs
+        Throughout my journey as a software engineering student and developer, I have worked on a variety of projects that demonstrate my skills 
+        in full-stack development, problem-solving, and creativity. Each project represents a unique challenge that I’ve tackled, whether it's through
+         frontend development, backend architecture, or creating user-friendly interfaces. Below, you’ll find a selection of my work — some complete,
+         and others still in progress, showcasing my continual pursuit of learning and growth.
       </motion.p>
       <div className='mt-10 md:mt-20 flex flex-col gap-20'>
         {projects.map((project, index) => (

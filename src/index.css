@@ -25,7 +25,6 @@
 }
 
 .arrowIcon:hover {
-  color: #6A0DAD;
   transform: scale(1.2);
 }
 
@@ -44,8 +43,8 @@
 }
 
 .card-gradient {
-  background: linear-gradient(90deg, #915eff, #00D1FF);
-  background: -webkit-linear-gradient(-90deg, #915eff, #00D1FF);
+  background: linear-gradient(90deg, #000000, #000000);
+  background: -webkit-linear-gradient(-90deg, #000000, #000000);
 }
 
 .orange-text-gradient {
