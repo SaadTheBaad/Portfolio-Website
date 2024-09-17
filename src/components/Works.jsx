@@ -69,10 +69,10 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30-px]'>
-        Throughout my journey as a software engineering student and developer, I have worked on a variety of projects that demonstrate my skills 
+        Throughout my journey as a software engineering student and developer, I have worked on a variety of projects that demonstrate my skills
         in full-stack development, problem-solving, and creativity. Each project represents a unique challenge that I’ve tackled, whether it's through
-         frontend development, backend architecture, or creating user-friendly interfaces. Below, you’ll find a selection of my work — some complete,
-         and others still in progress, showcasing my continual pursuit of learning and growth.
+        frontend development, backend architecture, or creating user-friendly interfaces. Below, you’ll find a selection of my work — some complete,
+        and others still in progress, showcasing my continual pursuit of learning and growth.
       </motion.p>
       <div className='mt-10 md:mt-20 flex flex-col gap-20'>
         {projects.map((project, index) => (
