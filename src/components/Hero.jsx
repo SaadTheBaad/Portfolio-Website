@@ -32,7 +32,7 @@ const Hero = () => {
       <div className={`${styles.paddingX} absolute justify-center inset-0 max-w-7xl mx-auto flex flex-row items-center gap-8`}>
         <div className='flex justify-center'>
           <img 
-            src='/src/assets/pfp.jpg'
+            src='/pfp.jpg'
             alt='avatar'
             className='rounded-full object-cover'
             height={'200px'}
