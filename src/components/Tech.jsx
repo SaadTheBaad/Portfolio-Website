@@ -9,8 +9,8 @@ const Tech = () => {
       <div className='flex justify-center pt-16 -rotate-2'>
         <h2 className={styles.sectionHeadText}>Skills.</h2>
       </div>
-      <div className='overflow-x-clip pb-16'>
-        <div className='bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 -rotate-3 -mx-3 border-solid border-black border-4'>
+      <div className='pb-16'>
+        <div className='bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 -rotate-3 -mx-3 border-solid border-black border-4 overflow-x-clip'>
           <div className='flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>
             <div className='flex flex-none gap-44 py-3 pr-4 animate-move-left'>
               {technologies.map((technology) => (
