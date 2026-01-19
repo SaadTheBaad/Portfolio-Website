@@ -7,7 +7,16 @@ import { SectionWrapper } from "../hoc";
 import { MdCheckCircle } from "react-icons/md";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
-const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
+const ProjectsCard = ({
+  title,
+  year,
+  results,
+  link,
+  image,
+  type,
+  status,
+  index,
+}) => {
   const hasLink = Boolean(link && link.trim().length > 0);
   const isApp = type === "app";
 
@@ -57,7 +66,7 @@ const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
                 <FaArrowTrendUp />
               </button>
             </a>
-          ) : (
+          ) : status === "coming-soon" ? (
             <button
               disabled
               className="bg-black/10 text-black/50 h-12 w-full md:w-auto px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8 cursor-not-allowed"
@@ -65,7 +74,11 @@ const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
             >
               <span>Coming Soon</span>
             </button>
-          )}
+          ) : status === "private" ? (
+            <span className="inline-flex mt-8 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-black/70">
+              Private
+            </span>
+          ) : null}
         </div>
 
         <div className="mt-8 lg:mt-0">

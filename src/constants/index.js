@@ -201,6 +201,7 @@ const projects = [
     title: "PokeGoggles",
     year: "2025 - Ongoing",
     type: "app",
+    status: "coming-soon",
     results: [
       {
         title:
@@ -222,6 +223,7 @@ const projects = [
     title: "Intentify",
     year: "2026 - Completed",
     type: "app",
+    status: "live",
     results: [
       {
         title:
@@ -243,6 +245,7 @@ const projects = [
     title: "BeAlive",
     year: "2025 - Completed",
     type: "app",
+    status: "live",
     results: [
       {
         title:
@@ -264,6 +267,7 @@ const projects = [
     title: "Medinator",
     year: "2025 - Completed",
     type: "web",
+    status: "live",
     results: [
       {
         title:
@@ -285,6 +289,7 @@ const projects = [
     title: "HomeRun",
     year: "2025 - Completed",
     type: "web",
+    status: "live",
     results: [
       {
         title:
@@ -306,6 +311,7 @@ const projects = [
     title: "BudgetWise",
     year: "2025 - Completed",
     type: "web",
+    status: "live",
     results: [
       {
         title:
@@ -327,6 +333,7 @@ const projects = [
     title: "Brian AI Bot",
     year: "2024 - Completed",
     type: "web",
+    status: "private",
     results: [
       {
         title:
