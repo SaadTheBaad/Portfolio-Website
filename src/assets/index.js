@@ -32,6 +32,8 @@ import default_project_image from "./default_project_image.jpg";
 import intentiy_main_page from "./intentiy_main_page.png"
 import pokegoggles_image from "./pokegoggles_image.png"
 import bealive_image from "./bealive_image.jpg"
+import budgetwise_image from "./budgetwise_image.png"
+import medinator_image from "./medinator_image.png"
 
 export {
   logo,
@@ -65,4 +67,6 @@ export {
   intentiy_main_page,
   pokegoggles_image,
   bealive_image,
+  budgetwise_image,
+  medinator_image,
 };

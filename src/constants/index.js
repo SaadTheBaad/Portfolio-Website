@@ -26,6 +26,8 @@ import {
   intentiy_main_page,
   pokegoggles_image,
   bealive_image,
+  budgetwise_image,
+  medinator_image,
 } from "../assets";
 
 export const navLinks = [
@@ -255,6 +257,48 @@ const projects = [
     ],
     link: "https://github.com/SaadTheBaad/BeAlive",
     image: bealive_image,
+  },
+  {
+    title: "Medinator",
+    year: "2025 - Completed",
+    type: "web",
+    results: [
+      {
+        title:
+          "AI-powered symptom triage tool focused on safety, clarity, and decision support",
+      },
+      {
+        title:
+          "Used clinically guided questioning and red-flag detection instead of open-ended diagnosis",
+      },
+      {
+        title:
+          "Designed a risk-aware system that classifies urgency and next steps without replacing clinicians",
+      },
+    ],
+    link: "https://medinator.vercel.app/",
+    image: medinator_image,
+  },
+  {
+    title: "BudgetWise",
+    year: "2025 - Completed",
+    type: "web",
+    results: [
+      {
+        title:
+          "AI-powered budgeting tool that turns raw bank statements into actionable spending insights",
+      },
+      {
+        title:
+          "Designed a modular monolithic backend using SOLID principles for fast iteration and clarity",
+      },
+      {
+        title:
+          "Automated PDF ingestion, transaction extraction, and analysis with AI-driven insights",
+      },
+    ],
+    link: "https://github.com/SaadTheBaad/BudgetWise",
+    image: budgetwise_image,
   },
 ];
 
