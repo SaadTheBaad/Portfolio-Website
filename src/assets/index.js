@@ -29,6 +29,7 @@ import TJX_Symbol from "./company/TJX_Symbol.png";
 import workhub_icon from "./company/workhub_icon.png";
 
 import default_project_image from "./default_project_image.jpg";
+import intentiy_main_page from "./intentiy_main_page.png"
 
 export {
   logo,
@@ -59,4 +60,5 @@ export {
   workhub_icon,
   TJX_Symbol,
   default_project_image,
+  intentiy_main_page,
 };

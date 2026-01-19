@@ -23,6 +23,7 @@ import {
     workhub_icon,
     threejs,
     default_project_image,
+    intentiy_main_page,
   } from "../assets";
   
   export const navLinks = [
@@ -193,17 +194,19 @@ import {
     {
       title: "Intentify",
       year: "2026",
+      type: "app",
       results: [
         { title: "Intent-first assistive communication for users with speech impairments (agency > automation)" },
         { title: "Matches imperfect speech to a user-approved intent library using embeddings + cosine similarity" },
         { title: "Always requires confirmation; AI only suggests new intents when confidence is low" },
       ],
       link: "https://github.com/SaadTheBaad/Intentify",
-      image: default_project_image,
+      image: intentiy_main_page,
     },
     {
       title: "Project 2",
       year: "2024",
+      type: "web",
       results: [
         { title: "Info 4" },
         { title: "Info 5" },
@@ -215,6 +218,7 @@ import {
     {
       title: "Project 3",
       year: "2024",
+      type: "web",
       results: [
         { title: "Info 7" },
         { title: "Info 8" },

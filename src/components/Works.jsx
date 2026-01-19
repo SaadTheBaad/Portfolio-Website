@@ -7,8 +7,9 @@ import { SectionWrapper } from "../hoc";
 import { MdCheckCircle } from "react-icons/md";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
-const ProjectsCard = ({ title, year, results, link, image, index }) => {
+const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
   const hasLink = Boolean(link && link.trim().length > 0);
+  const isApp = type === "app";
 
   return (
     <div
@@ -68,14 +69,45 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
         </div>
 
         <div className="mt-8 lg:mt-0">
-          <div className="relative rounded-2xl overflow-hidden border border-black/10 bg-[#f4f4f5] shadow-[0_20px_50px_-35px_rgba(0,0,0,0.4)]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/30" />
-            <img
-              src={image}
-              alt={`${title} preview`}
-              loading="lazy"
-              className="relative w-full h-full object-cover aspect-[4/3]"
-            />
+          <div
+            className={`relative mx-auto ${
+              isApp
+                ? "max-w-[260px] md:max-w-[320px]"
+                : "w-full max-w-[520px]"
+            }`}
+          >
+            <div
+              className={`relative overflow-hidden bg-[#f4f4f5] border border-black/10 shadow-[0_20px_50px_-35px_rgba(0,0,0,0.4)] ${
+                isApp ? "rounded-[32px] p-3" : "rounded-2xl p-3"
+              }`}
+            >
+              {!isApp && (
+                <div className="flex items-center gap-2 px-3 pb-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
+                  <div className="ml-auto h-2.5 w-16 rounded-full bg-black/10" />
+                </div>
+              )}
+              {isApp && (
+                <div className="absolute left-1/2 top-2 h-1.5 w-16 -translate-x-1/2 rounded-full bg-black/15" />
+              )}
+              <div
+                className={`relative overflow-hidden border border-black/10 bg-white ${
+                  isApp ? "rounded-[22px]" : "rounded-xl"
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`${title} preview`}
+                  loading="lazy"
+                  className={`relative w-full h-full object-cover ${
+                    isApp ? "aspect-[9/16]" : "aspect-[4/3]"
+                  }`}
+                />
+              </div>
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/5 via-transparent to-white/30" />
+            </div>
           </div>
         </div>
       </div>
