@@ -13,32 +13,33 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
   return (
     <div
       className="
-        bg-white rounded-3xl z-0 overflow-hidden
-        after:z-10 after:content-[''] after:absolute after:inset-0
-        after:outline-2 after:outline after:-outline-offset-2
-        after:rounded-3xl after:outline-black after:pointer-events-none
-        px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky
+        relative bg-white rounded-[28px] z-0 overflow-hidden border border-black/10
+        shadow-[0_30px_70px_-40px_rgba(0,0,0,0.45)]
+        before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_top_left,rgba(255,204,102,0.25),transparent_55%)]
+        px-6 pt-8 md:pt-10 md:px-10 lg:pt-12 lg:px-14 sticky
       "
       style={{ top: `${84 + index * 40}px` }}
     >
-      <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-        <div className="lg:pb-16">
-          <div className="flex justify-between items-center">
-            <h3 className="text-black text-[24px] mt-2 font-bold">{title}</h3>
-            <span className="text-secondary text-[16px] font-semibold">
+      <div className="relative lg:grid lg:grid-cols-[1.05fr_1fr] lg:gap-12 items-center">
+        <div className="lg:py-10">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-black text-[22px] md:text-[26px] font-bold">
+              {title}
+            </span>
+            <span className="rounded-full bg-black text-white text-[12px] font-semibold tracking-wide px-3 py-1">
               {year}
             </span>
           </div>
 
-          <hr className="border-t-2 border-black/5 mt-2" />
+          <p className="text-black/50 text-[12px] uppercase tracking-[0.2em] mt-6">
+            Highlights
+          </p>
 
-          <ul className="text-black text-[14px] pl-1 tracking-wider mt-5 md:mt-6">
+          <ul className="text-black/80 text-[14px] leading-6 mt-4 md:mt-5 space-y-3">
             {results.map((result, i) => (
-              <li key={`project-${title}-${i}`}>
-                <div className="flex gap-2 items-center mt-4">
-                  <MdCheckCircle size={16} />
-                  <span>{result.title}</span>
-                </div>
+              <li key={`project-${title}-${i}`} className="flex gap-3">
+                <MdCheckCircle className="text-black mt-1" size={16} />
+                <span>{result.title}</span>
               </li>
             ))}
           </ul>
@@ -50,7 +51,7 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
               rel="noopener noreferrer"
               aria-label={`Open ${title} project`}
             >
-              <button className="bg-black text-white h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+              <button className="bg-black text-white h-12 w-full md:w-auto px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8 transition-transform duration-200 hover:-translate-y-0.5">
                 <span>View Project</span>
                 <FaArrowTrendUp />
               </button>
@@ -58,7 +59,7 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
           ) : (
             <button
               disabled
-              className="bg-black/20 text-black/60 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 cursor-not-allowed"
+              className="bg-black/10 text-black/50 h-12 w-full md:w-auto px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8 cursor-not-allowed"
               title="Link coming soon"
             >
               <span>Coming Soon</span>
@@ -66,13 +67,16 @@ const ProjectsCard = ({ title, year, results, link, image, index }) => {
           )}
         </div>
 
-        <div>
-          <img
-            src={image}
-            alt={`${title} preview`}
-            loading="lazy"
-            className="mt-8 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-          />
+        <div className="mt-8 lg:mt-0">
+          <div className="relative rounded-2xl overflow-hidden border border-black/10 bg-[#f4f4f5] shadow-[0_20px_50px_-35px_rgba(0,0,0,0.4)]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/30" />
+            <img
+              src={image}
+              alt={`${title} preview`}
+              loading="lazy"
+              className="relative w-full h-full object-cover aspect-[4/3]"
+            />
+          </div>
         </div>
       </div>
     </div>
