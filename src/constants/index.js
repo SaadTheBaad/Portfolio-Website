@@ -140,6 +140,19 @@ import {
       company_name: "Workhub",
       icon: workhub_icon,
       iconBg: "#DFE1DE",
+      date: "May 2025  - September 2025 ",
+      points: [
+        "Engineered high-performance virtual scroll tables with sticky headers, enabling smooth rendering of datasets with thousands of records.",
+        "Implemented real-time role-based permission gating, securing access while preserving UX responsiveness.",
+        "Optimized LINQ-to-SQL queries and backend filtering, improving query execution times for high volume data.",
+        "Collaborated with designers and backend engineers to ensure data integrity and performance across all layers.",
+      ],
+    },
+    {
+      title: "Junior Software Development Intern",
+      company_name: "Workhub",
+      icon: workhub_icon,
+      iconBg: "#DFE1DE",
       date: "May 2024  - September 2024 ",
       points: [
         "Gained hands-on experience in full-stack development by working with SQL, .NET APIs, and frontend to create and enhance web pages.",
@@ -178,14 +191,14 @@ import {
   
   const  projects = [
     {
-      title: "Project 1",
-      year: "2024",
+      title: "Intentify",
+      year: "2026",
       results: [
-        { title: "Info 1" },
-        { title: "Info 2" },
-        { title: "Info 3" },
+        { title: "Intent-first assistive communication for users with speech impairments (agency > automation)" },
+        { title: "Matches imperfect speech to a user-approved intent library using embeddings + cosine similarity" },
+        { title: "Always requires confirmation; AI only suggests new intents when confidence is low" },
       ],
-      link: "",
+      link: "https://github.com/SaadTheBaad/Intentify",
       image: default_project_image,
     },
     {
