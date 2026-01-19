@@ -34,6 +34,8 @@ import pokegoggles_image from "./pokegoggles_image.png"
 import bealive_image from "./bealive_image.jpg"
 import budgetwise_image from "./budgetwise_image.png"
 import medinator_image from "./medinator_image.png"
+import homerun_image from "./homerun_image.png"
+import brianai_image from "./brianai_image.png"
 
 export {
   logo,
@@ -69,4 +71,6 @@ export {
   bealive_image,
   budgetwise_image,
   medinator_image,
+  homerun_image,
+  brianai_image,
 };

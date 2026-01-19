@@ -101,9 +101,7 @@ const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
                   src={image}
                   alt={`${title} preview`}
                   loading="lazy"
-                  className={`relative w-full h-full object-cover ${
-                    isApp ? "aspect-[9/16]" : "aspect-[4/3]"
-                  }`}
+                  className="relative w-full h-auto object-cover"
                 />
               </div>
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/5 via-transparent to-white/30" />

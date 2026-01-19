@@ -28,6 +28,8 @@ import {
   bealive_image,
   budgetwise_image,
   medinator_image,
+  homerun_image,
+  brianai_image,
 } from "../assets";
 
 export const navLinks = [
@@ -206,7 +208,7 @@ const projects = [
       },
       {
         title:
-          "Re-architected data fetching with GraphQL + Apollo to eliminate 800+ redundant API calls per session",
+          "Re-architected data fetching with GraphQL and Apollo to eliminate 800+ redundant API calls per session",
       },
       {
         title:
@@ -223,15 +225,15 @@ const projects = [
     results: [
       {
         title:
-          "Intent-first assistive communication for users with speech impairments (agency > automation)",
+          "Intent-first assistive communication for users with speech impairments that prioritizes user agency",
       },
       {
         title:
-          "Matches imperfect speech to a user-approved intent library using embeddings + cosine similarity",
+          "Matches imperfect speech to a user-approved intent library using embeddings and cosine similarity",
       },
       {
         title:
-          "Always requires confirmation; AI only suggests new intents when confidence is low",
+          "Always requires confirmation, with AI suggesting new intents only when confidence is low",
       },
     ],
     link: "https://github.com/SaadTheBaad/Intentify",
@@ -248,11 +250,11 @@ const projects = [
       },
       {
         title:
-          "Designed YES / NO friend-backed commitments to keep users engaged and accountable",
+          "Designed YES and NO friend-backed commitments to keep users engaged and accountable",
       },
       {
         title:
-          "Built secure OTP auth, proof uploads, and challenge feeds with strict user-level access",
+          "Built secure OTP authentication, proof uploads, and challenge feeds with strict user-level access",
       },
     ],
     link: "https://github.com/SaadTheBaad/BeAlive",
@@ -280,6 +282,27 @@ const projects = [
     image: medinator_image,
   },
   {
+    title: "HomeRun",
+    year: "2025 - Completed",
+    type: "web",
+    results: [
+      {
+        title:
+          "Gamified savings app that helps users build a home down payment through daily spending discipline",
+      },
+      {
+        title:
+          "Automatically rounds up leftover daily budget and tracks progress toward weekly home runs",
+      },
+      {
+        title:
+          "Built a full-stack prototype with real bank integrations under hackathon time constraints",
+      },
+    ],
+    link: "https://github.com/SaadTheBaad/HomeRun-Hackathon-",
+    image: homerun_image,
+  },
+  {
     title: "BudgetWise",
     year: "2025 - Completed",
     type: "web",
@@ -299,6 +322,27 @@ const projects = [
     ],
     link: "https://github.com/SaadTheBaad/BudgetWise",
     image: budgetwise_image,
+  },
+  {
+    title: "Brian AI Bot",
+    year: "2024 - Completed",
+    type: "web",
+    results: [
+      {
+        title:
+          "Telegram chatbot designed to automate updates and increase community engagement",
+      },
+      {
+        title:
+          "Delivered personality-driven replies and social interactions to keep users active",
+      },
+      {
+        title:
+          "Added promotional and engagement tools to encourage participation and retention",
+      },
+    ],
+    link: "",
+    image: brianai_image,
   },
 ];
 
