@@ -24,6 +24,8 @@ import {
     threejs,
     default_project_image,
     intentiy_main_page,
+    pokegoggles_image,
+    bealive_image,
   } from "../assets";
   
   export const navLinks = [
@@ -193,7 +195,7 @@ import {
   const  projects = [
     {
       title: "Intentify",
-      year: "2026",
+      year: "2026 - Completed",
       type: "app",
       results: [
         { title: "Intent-first assistive communication for users with speech impairments (agency > automation)" },
@@ -204,29 +206,29 @@ import {
       image: intentiy_main_page,
     },
     {
-      title: "Project 2",
-      year: "2024",
-      type: "web",
+      title: "PokeGoggles",
+      year: "2025 - Ongoing",
+      type: "app",
       results: [
-        { title: "Info 4" },
-        { title: "Info 5" },
-        { title: "Info 6" },
+        { title: "Built a high-performance Pokémon data app focused on speed, caching, and UX" },
+        { title: "Re-architected data fetching with GraphQL + Apollo to eliminate 800+ redundant API calls per session" },
+        { title: "Designed secure, persistent user profiles with Firebase Auth and Supabase" },
       ],
       link: "",
-      image: default_project_image,
+      image: pokegoggles_image,
     },
     {
-      title: "Project 3",
-      year: "2024",
-      type: "web",
+      title: "BeAlive",
+      year: "2025 - Completed",
+      type: "app",
       results: [
-        { title: "Info 7" },
-        { title: "Info 8" },
-        { title: "Info 9" },
+        { title: "Social accountability app that turns personal goals into shared, time-bound challenges" },
+        { title: "Designed YES / NO friend-backed commitments to keep users engaged and accountable" },
+        { title: "Built secure OTP auth, proof uploads, and challenge feeds with strict user-level access" },
       ],
-      link: "",
-      image: default_project_image,
-    },
+      link: "https://github.com/SaadTheBaad/BeAlive",
+      image: bealive_image,
+    }
   ];
   
   export { services, technologies, experiences, projects };

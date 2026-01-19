@@ -30,6 +30,8 @@ import workhub_icon from "./company/workhub_icon.png";
 
 import default_project_image from "./default_project_image.jpg";
 import intentiy_main_page from "./intentiy_main_page.png"
+import pokegoggles_image from "./pokegoggles_image.png"
+import bealive_image from "./bealive_image.jpg"
 
 export {
   logo,
@@ -61,4 +63,6 @@ export {
   TJX_Symbol,
   default_project_image,
   intentiy_main_page,
+  pokegoggles_image,
+  bealive_image,
 };
