@@ -17,7 +17,7 @@ const ProjectsCard = ({ title, year, results, link, image, type, index }) => {
         relative bg-white rounded-[28px] z-0 overflow-hidden border border-black/10
         shadow-[0_30px_70px_-40px_rgba(0,0,0,0.45)]
         before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_top_left,rgba(255,204,102,0.25),transparent_55%)]
-        px-6 pt-8 md:pt-10 md:px-10 lg:pt-12 lg:px-14 sticky
+        px-6 pt-8 md:pt-10 md:px-10 lg:pt-12 lg:px-14 lg:sticky
       "
       style={{ top: `${84 + index * 40}px` }}
     >
@@ -131,7 +131,7 @@ const Works = () => {
       Here are a few projects I’m proud of, including hackathon builds and longer-term systems I’m actively improving.
 
       </motion.p>
-      <div className="mt-10 md:mt-20 flex flex-col gap-20">
+      <div className="mt-10 md:mt-20 flex flex-col gap-20 mb-12 md:mb-0">
         {projects.map((project, index) => (
           <ProjectsCard key={`project-${index}`} index={index} {...project} />
         ))}
