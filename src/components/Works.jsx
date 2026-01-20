@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { MdCheckCircle } from "react-icons/md";
-import { FaArrowTrendUp } from "react-icons/fa6";
+import { MdArrowOutward, MdLockOutline } from "react-icons/md";
+
+const cardGradients = [
+  "radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.1), transparent 60%)",
+  "radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.1), transparent 60%)", 
+  "radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.1), transparent 60%)", 
+];
 
 const ProjectsCard = ({
   title,
@@ -19,106 +24,111 @@ const ProjectsCard = ({
 }) => {
   const hasLink = Boolean(link && link.trim().length > 0);
   const isApp = type === "app";
+  
+  const bgGradient = cardGradients[index % cardGradients.length];
 
   return (
     <div
       className="
-        relative bg-white rounded-[28px] z-0 overflow-hidden border border-black/10
-        shadow-[0_30px_70px_-40px_rgba(0,0,0,0.45)]
-        before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_top_left,rgba(255,204,102,0.25),transparent_55%)]
-        px-6 pt-8 md:pt-10 md:px-10 lg:pt-12 lg:px-14 lg:sticky
+        relative z-0 bg-white/80 backdrop-blur-sm rounded-[32px] overflow-hidden border border-black/5
+        shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+        px-6 pt-10 md:px-12 md:pt-12 lg:px-16 lg:sticky transition-all duration-300
       "
-      style={{ top: `${84 + index * 40}px` }}
+      style={{ top: `${200 + index * 40}px`, backgroundImage: bgGradient }}
     >
-      <div className="relative lg:grid lg:grid-cols-[1.05fr_1fr] lg:gap-12 items-center">
-        <div className="lg:py-10">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-black text-[22px] md:text-[26px] font-bold">
-              {title}
-            </span>
-            <span className="rounded-full bg-black text-white text-[12px] font-semibold tracking-wide px-3 py-1">
-              {year}
-            </span>
+      <div className="relative lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-16 items-start">
+        <div className="flex flex-col h-full justify-between pb-10 lg:py-8">
+          <div>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="text-black text-[28px] md:text-[32px] font-bold tracking-tight">
+                {title}
+              </span>
+              
+              <div className="bg-black/5 border border-black/10 rounded-full px-3 py-1.5 flex items-center justify-center">
+                <span className="text-black/70 text-[12px] font-semibold uppercase tracking-wider leading-none">
+                  {year}
+                </span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {results.map((result, i) => (
+                <div key={`project-${title}-${i}`} className="group flex gap-4 items-start">
+                  <span className="mt-2 min-w-[6px] h-[6px] rounded-full bg-black/20 group-hover:bg-black/60 transition-colors" />
+                  <p className="text-black/70 text-[15px] md:text-[16px] leading-relaxed font-light">
+                    {result.title}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <p className="text-black/50 text-[12px] uppercase tracking-[0.2em] mt-6">
-            Highlights
-          </p>
-
-          <ul className="text-black/80 text-[14px] leading-6 mt-4 md:mt-5 space-y-3">
-            {results.map((result, i) => (
-              <li key={`project-${title}-${i}`} className="flex gap-3">
-                <MdCheckCircle className="text-black mt-1" size={16} />
-                <span>{result.title}</span>
-              </li>
-            ))}
-          </ul>
-
-          {hasLink ? (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Open ${title} project`}
-            >
-              <button className="bg-black text-white h-12 w-full md:w-auto px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8 transition-transform duration-200 hover:-translate-y-0.5">
-                <span>View Project</span>
-                <FaArrowTrendUp />
+          <div className="mt-10 md:mt-12 flex flex-wrap gap-4">
+            {hasLink ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-black px-8 font-medium text-white transition-all duration-300 hover:w-full md:hover:w-auto hover:bg-neutral-800 hover:shadow-lg"
+              >
+                <div className="flex items-center gap-2">
+                  <span>View Project</span>
+                  <MdArrowOutward className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </a>
+            ) : (
+              <button
+                disabled
+                className="inline-flex h-12 items-center px-8 rounded-full border border-black/10 bg-black/5 text-black/40 font-medium cursor-not-allowed"
+              >
+                 {status === "private" ? <MdLockOutline className="mr-2"/> : null}
+                 {status === "private" ? "Private Repo" : "Coming Soon"}
               </button>
-            </a>
-          ) : status === "coming-soon" ? (
-            <button
-              disabled
-              className="bg-black/10 text-black/50 h-12 w-full md:w-auto px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8 cursor-not-allowed"
-              title="Link coming soon"
-            >
-              <span>Coming Soon</span>
-            </button>
-          ) : status === "private" ? (
-            <span className="inline-flex mt-8 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-black/70">
-              Private
-            </span>
-          ) : null}
+            )}
+          </div>
         </div>
 
-        <div className="mt-8 lg:mt-0">
+        <div className="mt-8 lg:mt-0 w-full flex items-center justify-center lg:justify-end">
           <div
-            className={`relative mx-auto ${
+            className={`relative transition-transform duration-500 hover:scale-[1.01] ${
               isApp
-                ? "max-w-[260px] md:max-w-[320px]"
-                : "w-full max-w-[520px]"
+                ? "w-[240px] md:w-[280px]"
+                : "w-full max-w-[580px]"
             }`}
           >
             <div
-              className={`relative overflow-hidden bg-[#f4f4f5] border border-black/10 shadow-[0_20px_50px_-35px_rgba(0,0,0,0.4)] ${
-                isApp ? "rounded-[32px] p-3" : "rounded-2xl p-3"
-              }`}
+              className={`
+                relative overflow-hidden bg-gray-50 border-[6px] border-black/5 
+                shadow-[0_50px_100px_-20px_rgba(50,50,93,0.15),0_30px_60px_-30px_rgba(0,0,0,0.1)]
+                ${isApp ? "rounded-[40px] aspect-[9/19]" : "rounded-[16px] aspect-[16/10]"}
+              `}
             >
               {!isApp && (
-                <div className="flex items-center gap-2 px-3 pb-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
-                  <div className="ml-auto h-2.5 w-16 rounded-full bg-black/10" />
+                <div className="absolute top-0 left-0 right-0 h-8 bg-white border-b border-black/5 flex items-center px-4 gap-1.5 z-10">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
+                  <div className="mx-auto w-1/3 h-4 bg-gray-100 rounded-md" />
                 </div>
               )}
+
               {isApp && (
-                <div className="absolute left-1/2 top-2 h-1.5 w-16 -translate-x-1/2 rounded-full bg-black/15" />
+                 <div className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-24 bg-black rounded-b-xl z-20" />
               )}
-              <div
-                className={`relative overflow-hidden border border-black/10 bg-white ${
-                  isApp ? "rounded-[22px]" : "rounded-xl"
-                }`}
-              >
+
+              <div className={`w-full h-full overflow-hidden bg-white ${!isApp ? "pt-8" : ""}`}>
                 <img
                   src={image}
                   alt={`${title} preview`}
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
-                  className="relative w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/5 via-transparent to-white/30" />
+              
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/0 via-white/0 to-white/40 opacity-50 z-10" />
             </div>
+            
+            <div className="absolute -inset-4 bg-gradient-to-r from-gray-200/50 to-gray-100/50 blur-2xl -z-10 rounded-full opacity-50" />
           </div>
         </div>
       </div>
@@ -129,20 +139,25 @@ const ProjectsCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
-      </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-      Throughout my journey as a software engineering student, I’ve built products that focus on performance, 
-      accessibility, and real-world usability — from serverless mobile apps to full-stack platforms. 
-      Here are a few projects I’m proud of, including hackathon builds and longer-term systems I’m actively improving.
+      {/* Header always above */}
+      <div className="relative z-20 pointer-events-none">
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>My Work</p>
+          <h2 className={styles.sectionHeadText}>Projects.</h2>
+        </motion.div>
 
-      </motion.p>
-      <div className="mt-10 md:mt-20 flex flex-col gap-20 mb-12 md:mb-0">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-4 text-black/60 text-[17px] max-w-3xl leading-[30px]"
+        >
+          Throughout my journey as a software engineering student, I've built products that focus on performance,
+          accessibility, and real-world usability, from serverless mobile apps to full-stack platforms.
+          Here are a few projects I'm proud of, including hackathon builds and longer-term systems I'm actively improving.
+        </motion.p>
+      </div>
+
+      {/* Cards go under header */}
+      <div className="relative z-0 mt-24 flex flex-col gap-10 pb-20">
         {projects.map((project, index) => (
           <ProjectsCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -150,5 +165,6 @@ const Works = () => {
     </>
   );
 };
+
 
 export default SectionWrapper(Works, "");
