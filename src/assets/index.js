@@ -24,6 +24,14 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import net from "./tech/net.png";
+import nodejs from "./tech/nodejs.png";
+import graphQL from "./tech/graphQL.png";
+import apolloClient from "./tech/apolloClient.png";
+import firebase from "./tech/firebase.png";
+import supabase from "./tech/supabase.png";
+import postgres from "./tech/postgres.png";
+import mysql from "./tech/mysql.png";
+import aws from "./tech/aws.png";
 
 import TJX_Symbol from "./company/TJX_Symbol.png";
 import workhub_icon from "./company/workhub_icon.png";
@@ -51,7 +59,15 @@ export {
   close,
   css,
   c,
+  aws,
   net,
+  nodejs,
+  supabase,
+  postgres,
+  graphQL,
+  mysql,
+  firebase,
+  apolloClient,
   figma,
   git,
   html,

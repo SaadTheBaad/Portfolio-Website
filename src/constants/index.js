@@ -17,8 +17,16 @@ import {
   c_plus_Plus,
   git,
   figma,
+  nodejs,
   c,
+  mysql,
+  postgres,
+  supabase,
+  firebase,
+  graphQL,
   net,
+  aws,
+  apolloClient,
   TJX_Symbol,
   workhub_icon,
   threejs,
@@ -83,63 +91,31 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Angular",
-    icon: angular,
-  },
-  {
-    name: ".Net",
-    icon: net,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "C",
-    icon: c,
-  },
-  {
-    name: "C++",
-    icon: c_plus_Plus,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+
+  { name: "React JS", icon: reactjs },
+  { name: "Angular", icon: angular },
+
+  { name: "Node.js", icon: nodejs },
+  { name: ".NET", icon: net },
+
+  { name: "Tailwind CSS", icon: tailwind },
+
+  { name: "Python", icon: python },
+
+  { name: "GraphQL", icon: graphQL },
+
+  { name: "AWS", icon: aws },
+
+  { name: "Firebase", icon: firebase },
+  { name: "Supabase", icon: supabase },
+
+  { name: "Git", icon: git },
+
+  { name: "Figma", icon: figma },
 ];
+
 
 const experiences = [
   {
